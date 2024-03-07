@@ -5,11 +5,10 @@ generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["fullTextSearch"]
 }
-
 datasource db {
   provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") 
-  directUrl = env("POSTGRES_URL_NON_POOLING") 
+  url = "postgres://default:9CjNpZsM4gYJ@ep-square-mountain-a4fgvtlq-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15" 
+  directUrl = "postgres://default:9CjNpZsM4gYJ@ep-square-mountain-a4fgvtlq.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
 }
 
 model Job {
