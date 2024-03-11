@@ -2,7 +2,7 @@ import { jobTypes } from "@/lib/job-types";
 import prisma from "@/lib/prisma";
 import { JobFilterValues, jobFilterSchema } from "@/lib/validation";
 import { redirect } from "next/navigation";
- import FormSubmitButton from "./FormSubmitButton";
+import FormSubmitButton from "./FormSubmitButton";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import Select from "./ui/select";
@@ -57,7 +57,7 @@ export default async function JobFilterSidebar({
           <div className="flex flex-col gap-2">
             <Label htmlFor="type">Type</Label>
             <Select
-              id="type" 
+              id="type"
               name="type"
               defaultValue={defaultValues.type || ""}
             >

@@ -1,13 +1,12 @@
 "use client";
 
 import { useFormStatus } from "react-dom";
-import LoadingButton from "./LoadingButton.jsx";
+import LoadingButton from "./LoadingButton";
 
 export default function FormSubmitButton(
   props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   const { pending } = useFormStatus();
-  return ( 
-       <LoadingButton loading={false}  > </LoadingButton>
-  )
+
+  return <LoadingButton {...props} type="submit" loading={pending} />;
 }
